@@ -1,13 +1,13 @@
 // ==UserScript==
-// @name         Simple Old Reddit Redirect
-// @version      1.6
+// @name         A Better Old Reddit Redirect
+// @version      1.0
 // @description  Redirects reddit.com links to old.reddit.com, opens media in new tabs, and redirects .png and .jpeg links to redlib.perennialte.ch
 // @match        *://*.reddit.com/*
 // @exclude      *://www.reddit.com/poll/*
 // @grant        none
 // @run-at       document-start
 // @license      MIT
-// @namespace    https://greasyfork.org/users/1101475
+// @namespace    https://raw.githubusercontent.com/korpez/reddit_redirect/refs/heads/main/reddit_redirect.js
 // ==/UserScript==
 
 (function() {
