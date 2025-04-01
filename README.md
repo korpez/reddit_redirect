@@ -4,13 +4,12 @@
 
 🎯 **Level up your Reddit browsing experience!** This lightweight userscript automatically redirects you from the cluttered modern Reddit interface (`www.reddit.com`) to the clean, fast, and beloved classic interface (`old.reddit.com`).
 
-🖼️✨ **Better Media Viewing:** Opens direct media links in fresh tabs, and effortlessly redirects `.png` and `.jpeg` images from `i.redd.it` to the reliable `redlib.perennialte.ch`.
+🖼️✨ **Better Media Viewing:** Opens direct media links in fresh tabs, and effortlessly redirects `.png` , `.gif` and `.jpeg` images from `i.redd.it` and `preview.redd.it` to the reliable `redlib.perennialte.ch`.
 
 ## 🚨 Features
 
 - 🔄 **Instant Old Reddit:** Seamlessly converts `www.reddit.com` links to the classic `old.reddit.com`.
 - 📽️ **Media Friendly:** Opens Reddit media content instantly in new browser tabs.
-- 📸 **Image Boost:** Automatically routes images (`.png` and `.jpeg`) from `i.redd.it` to the superior `redlib.perennialte.ch` hosting.
 
 ## 📥 Installation
 
