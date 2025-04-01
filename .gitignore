@@ -1,0 +1,9 @@
+# Ignore everything
+*
+
+# Allow specific files
+!README.md
+!reddit_redirect.js
+
+# Ignore node_modules even if explicitly allowed above
+node_modules/
