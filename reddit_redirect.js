@@ -7,7 +7,7 @@
 // @grant        none
 // @run-at       document-start
 // @license      MIT
-// @namespace    https://raw.githubusercontent.com/korpez/reddit_redirect/refs/heads/main/reddit_redirect.js
+// @namespace    https://raw.githubusercontent.com/korpez/reddit_redirect/main/reddit_redirect.js
 // @updateURL    https://raw.githubusercontent.com/korpez/reddit_redirect/main/reddit_redirect.js
 // @downloadURL  https://raw.githubusercontent.com/korpez/reddit_redirect/main/reddit_redirect.js
 // ==/UserScript==
