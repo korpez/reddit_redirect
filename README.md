@@ -1,5 +1,7 @@
 # 🚀  A Better Old Reddit Redirect Userscript 🌟
 
+## [Link to Raw URL](https://raw.githubusercontent.com/korpez/reddit_redirect/refs/heads/main/reddit_redirect.js)
+
 🎯 **Level up your Reddit browsing experience!** This lightweight userscript automatically redirects you from the cluttered modern Reddit interface (`www.reddit.com`) to the clean, fast, and beloved classic interface (`old.reddit.com`).
 
 🖼️✨ **Better Media Viewing:** Opens direct media links in fresh tabs, and effortlessly redirects `.png` and `.jpeg` images from `i.redd.it` to the reliable `redlib.perennialte.ch`.
