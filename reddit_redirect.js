@@ -27,7 +27,7 @@
             if (isRedditMediaRedirect(url)) return;
 
             // Redirect .png and .jpeg links to redlib.perennialte.ch
-            if (url.hostname === 'i.redd.it' && (url.pathname.endsWith('.png') || url.pathname.endsWith('.jpeg'))) {
+           if ((url.hostname === 'i.redd.it' || url.hostname === 'preview.redd.it') && (url.pathname.endsWith('.png') || url.pathname.endsWith('.jpeg'))) {
                 link.href = `https://redlib.perennialte.ch/img${url.pathname}`;
                 link.target = '_blank';
                 link.rel = 'noopener';
