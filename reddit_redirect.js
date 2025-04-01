@@ -1,63 +1,68 @@
 // ==UserScript==
 // @name         A Better Old Reddit Redirect
 // @version      1.0
-// @description  Redirects reddit.com links to old.reddit.com, opens media in new tabs, and redirects .png and .jpeg links to redlib.perennialte.ch
+// @namespace    https://github.com/korpez/reddit_redirect
+// @description  Redirects reddit.com links to old.reddit.com, opens media in new tabs, and redirects media links to redlib.perennialte.ch
 // @match        *://*.reddit.com/*
 // @exclude      *://www.reddit.com/poll/*
 // @grant        none
 // @run-at       document-start
 // @license      MIT
-// @namespace    https://raw.githubusercontent.com/korpez/reddit_redirect/main/reddit_redirect.js
-// @updateURL    https://raw.githubusercontent.com/korpez/reddit_redirect/main/reddit_redirect.js
-// @downloadURL  https://raw.githubusercontent.com/korpez/reddit_redirect/main/reddit_redirect.js
+// @updateURL    https://openuserjs.org/meta/korpez/A_Better_Old_Reddit_Redirect.meta.js
+// @downloadURL  https://openuserjs.org/install/korpez/A_Better_Old_Reddit_Redirect.user.js
+// @copyright    2025, korpez (https://openuserjs.org/users/korpez)
 // ==/UserScript==
 
-(function() {
-    'use strict';
+(function () {
+  'use strict';
 
-    const mediaHosts = ['i.redd.it', 'v.redd.it', 'preview.redd.it', 'redditmedia.com'];
+  const mediaHosts = ['i.redd.it', 'v.redd.it', 'preview.redd.it', 'redditmedia.com'];
 
-    const isMediaLink = (url) => mediaHosts.some(host => url.hostname.includes(host));
+  const isMediaLink = (url) => mediaHosts.some(host => url.hostname.includes(host));
 
-    const isRedditMediaRedirect = (url) => url.hostname.endsWith('reddit.com') && url.pathname === '/media';
+  const isRedditMediaRedirect = (url) => url.hostname.endsWith('reddit.com') && url.pathname === '/media';
 
-    const updateLink = (link) => {
-        try {
-            const url = new URL(link.href);
+  const updateLink = (link) => {
+    try {
+      const url = new URL(link.href);
 
-            // Never modify Reddit's media redirect URLs
-            if (isRedditMediaRedirect(url)) return;
+      // Never modify Reddit's media redirect URLs
+      if (isRedditMediaRedirect(url)) return;
 
-            // Redirect .png and .jpeg links to redlib.perennialte.ch
-           if ((url.hostname === 'i.redd.it' || url.hostname === 'preview.redd.it') && (url.pathname.endsWith('.png') || url.pathname.endsWith('.jpeg') || url.pathname.endsWith('.gif'))) {
-                link.href = `https://redlib.perennialte.ch/img${url.pathname}`;
-                link.target = '_blank';
-                link.rel = 'noopener';
-                return;
-            }
+      // Redirect .png and .jpeg links to redlib.perennialte.ch
+      if ((url.hostname === 'i.redd.it' || url.hostname === 'preview.redd.it') && (url.pathname.endsWith('.png') || url.pathname.endsWith('.jpeg') || url.pathname.endsWith('.gif'))) {
+        link.href = `https://redlib.perennialte.ch/img${url.pathname}`;
+        link.target = '_blank';
+        link.rel = 'noopener';
+        return;
+      }
 
-            // If it's a direct media link, open it in a new tab without redirection
-            if (isMediaLink(url)) {
-                link.target = '_blank';
-                link.rel = 'noopener';
-                return;
-            }
+      // If it's a direct media link, open it in a new tab without redirection
+      if (isMediaLink(url)) {
+        link.target = '_blank';
+        link.rel = 'noopener';
+        return;
+      }
 
-            // Redirect www.reddit.com to old.reddit.com
-            if (url.hostname === 'www.reddit.com') {
-                url.hostname = 'old.reddit.com';
-                link.href = url.toString();
-            }
+      // Redirect www.reddit.com to old.reddit.com
+      if (url.hostname === 'www.reddit.com') {
+        url.hostname = 'old.reddit.com';
+        link.href = url.toString();
+      }
 
-        } catch (e) {}
-    };
+    }
+    catch (e) {}
+  };
 
-    const processLinks = () => {
-        document.querySelectorAll('a[href*="reddit.com"], a[href*="redd.it"]').forEach(updateLink);
-    };
+  const processLinks = () => {
+    document.querySelectorAll('a[href*="reddit.com"], a[href*="redd.it"]').forEach(updateLink);
+  };
 
-    const observer = new MutationObserver(processLinks);
-    observer.observe(document, { childList: true, subtree: true });
+  const observer = new MutationObserver(processLinks);
+  observer.observe(document, {
+    childList: true,
+    subtree: true
+  });
 
-    window.addEventListener('load', processLinks);
+  window.addEventListener('load', processLinks);
 })();
