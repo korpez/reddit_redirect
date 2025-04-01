@@ -1,6 +1,6 @@
 # 🚀  A Better Old Reddit Redirect Userscript 🌟
 
-## [Link to Raw URL](https://raw.githubusercontent.com/korpez/reddit_redirect/refs/heads/main/reddit_redirect.js)
+## [Link to Raw URL for Install](https://raw.githubusercontent.com/korpez/reddit_redirect/refs/heads/main/reddit_redirect.js)
 
 🎯 **Level up your Reddit browsing experience!** This lightweight userscript automatically redirects you from the cluttered modern Reddit interface (`www.reddit.com`) to the clean, fast, and beloved classic interface (`old.reddit.com`).
 
