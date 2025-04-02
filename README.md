@@ -2,7 +2,7 @@
 
 ## [Link to Raw URL for Install](https://raw.githubusercontent.com/korpez/reddit_redirect/refs/heads/main/reddit_redirect.js)
 
-## 🎯 **Level up your Reddit browsing experience!** This lightweight userscript automatically redirects you away from the bloated, invasive modern [Reddit](https://www.reddit.com) to the [faster, cleaner classic interface.](https://old.reddit.com)
+## 🎯 This lightweight userscript automatically redirects you away from the bloated, invasive modern [Reddit](https://www.reddit.com) to the [faster, cleaner classic interface.](https://old.reddit.com)
 
 - 🖼️✨ **Smarter Media Viewing:** Automatically opens media in new tabs and redirects `.png`, `.jpeg`, `.jpg`, `.webp`, and `.gif` images from `i.redd.it` and `preview.redd.it` to the privacy-friendly `redlib.perennialte.ch` mirror.
 
