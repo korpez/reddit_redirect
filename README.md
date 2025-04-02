@@ -55,8 +55,6 @@ By switching to Old Reddit, you bypass this surveillance-heavy infrastructure en
 - Clean up all links
 - Route supported image content to `redlib`
 
-No setup. No configuration. Pure browsing bliss.
-
 ---
 
 ## 📜 License
